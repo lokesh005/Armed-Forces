@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+   <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dashboard">
+    <meta name="author" content="Lokesh Todwal">
+    <meta name="keyword" content="hii">
+    <link rel="shortcut icon" href="img/favicon.png">
+
+    <title>Navy</title>
+	
+	<script src="http://colorbrewer2.org/export/colorbrewer.js"></script>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="http://d3js.org/topojson.v1.min.js"></script>
+
+<script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+	
+	<script src="amcharts.js"></script>
+	<script src="radar.js"></script>
+	<script src="serial.js"></script>
+	<script src="funnel.js"></script>
+<script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
+<script src="responsive.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- bootstrap theme -->
+    <link href="css/bootstrap-theme.css" rel="stylesheet">
+    <!-- external css -->
+    <!-- font icon -->
+    <link href="css/elegant-icons-style.css" rel="stylesheet" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <!-- Custom styles -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style-responsive.css" rel="stylesheet" />
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+      <script src="js/lte-ie7.js"></script>
+    <![endif]-->
+	<style type="text/css">
+	.canton-boundary {
+  fill: none;
+  stroke: #fff;
+  stroke-linejoin: round;
+}
+
+text {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 10px;
+  text-anchor: middle;
+}
+	
+			.d3-tip {
+			  line-height: 1;
+			  font-weight: bold;
+			  padding: 12px;
+			  background: black;
+			  color: #fff;
+			  border-radius: 2px;
+			  opacity: 0.001%;
+			}
+			.d3-tip:after {
+			  box-sizing: border-box;
+			  display: inline;
+			  font-size: 10px;
+			  width: 100%;
+			  line-height: 1;
+			  color: black;
+			  content: "\25BC";
+			  position: absolute;
+			  text-align: center;
+			  opacity: 0.001%;
+			}
+
+			.d3-tip.n:after {
+			  margin: -1px 0 0 0;
+			  top: 100%;
+			  left: 0;
+			  opacity: 0.001%;
+			}
+			
+			.area:hover {
+				fill: brown;
+			}
+	</style>
+  </head>
+
+  <body>
+  <!-- container section start -->
+  <section id="container" class="">
+      <!--header start-->
+      <header class="header dark-bg">
+            <div class="toggle-nav">
+                <div class="icon-reorder tooltips" data-original-title="Toggle Navigation" data-placement="bottom"><i class="icon_menu"></i></div>
+            </div>
+
+            <!--logo start-->
+            <a href="index.html" class="logo">Indian<span class="lite"> Armed Forces</span></a>
+            <!--logo end-->
+
+          
+      </header>      
+      <!--header end-->
+
+      <!--sidebar start-->
+      <aside>
+          <div id="sidebar"  class="nav-collapse ">
+              <!-- sidebar menu start-->
+              <ul class="sidebar-menu">                
+                  <li class="active">
+                      <a class="" href="index.html">
+                          <i class="icon_house_alt"></i>
+                          <span>Indian Army</span>
+                      </a>
+                  </li>
+				  
+                  <li>
+                      <a class="" href="widgets.html">
+                          <i class="icon_genius"></i>
+                          <span>Indian Navy</span>
+                      </a>
+                  </li>
+                  <li>                     
+                      <a class="" href="chart-chartjs.html">
+                          <i class="icon_piechart"></i>
+                          <span>Indian Airforce</span>
+                          
+                      </a>
+                                         
+                  </li>
+                             
+                  
+                  </li>
+                  
+              </ul>
+              <!-- sidebar menu end-->
+          </div>
+      </aside>
+      <!--sidebar end-->
+
+      <!--main content start-->
+      <section id="main-content">
+          <section class="wrapper">
+			<div class="row">
+				<div class="col-lg-12">
+					<h3 class="page-header"><i class="icon_genius"></i> Indian Navy</h3>
+					<ol class="breadcrumb">
+						<li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
+						<li><i class="icon_genius"></i>Indian Navy</li>
+					</ol>	
+				</div>
+			</div>
+			
+			<div class="row">
+		    <div class="col-lg-6 col-md-8">
+					
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h2><i class="fa fa-map-marker red"></i><strong>Surface Fleets</strong></h2>
+							<div class="panel-actions">
+								<a href="index.html#" class="btn-setting"><i class="fa fa-rotate-right"></i></a>
+								<a href="index.html#" class="btn-minimize"><i class="fa fa-chevron-up"></i></a>
+								<a href="index.html#" class="btn-close"><i class="fa fa-times"></i></a>
+							</div>	
+						</div>
+						<div class="panel-body-map">
+							<div id="chartdiv656" style="width:100%; height:380px;"></div>
+							<script>
+ 
+  			var chart = AmCharts.makeChart( "chartdiv656", {
+  "type": "radar",
+  "theme": "light",
+  "dataProvider": [ {
+    "country":"Mine countermeasure vessels" ,
+    "ships": 6
+  }, {
+    "country": "Destroyer",
+    "ships": 10
+  }, {
+    "country": "Aircraft carriers",
+    "ships": 2
+  }, {
+    "country": "Amphibious warfare",
+    "ships": 20
+  }, {
+    "country": "Corvettes",
+    "ships": 26
+  }, {
+    "country":"Frigates",
+    "ships": 15
+  },
+ {
+    "country": "Patrol vessels",
+    "ships": 35
+  }  
+  ],
+  "marginRight":20,
+  "marginLeft":20,
+  "valueAxes": [ {
+    "axisTitleOffset": 5,
+    "minimum": 0,
+    "axisAlpha": 0.15
+  } ],
+  "startDuration": 2,
+  "graphs": [ {
+    "balloonText": "[[value]] ships of Surface fleet",
+    "bullet": "round",
+    "valueField": "ships"
+  } ],
+  "categoryField": "country",
+  "responsive": {
+    "enabled": true
+  },
+  "export": {
+    "enabled": true
+  }
+} );
+</script>		
+						</div>
+	
+					</div>
+				</div>
+              
+            <div class="col-lg-6 col-md-8">
+					
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h2><i class="fa fa-map-marker red"></i><strong>Auxiliary fleet</strong></h2>
+							<div class="panel-actions">
+								<a href="index.html#" class="btn-setting"><i class="fa fa-rotate-right"></i></a>
+								<a href="index.html#" class="btn-minimize"><i class="fa fa-chevron-up"></i></a>
+								<a href="index.html#" class="btn-close"><i class="fa fa-times"></i></a>
+							</div>	
+						</div>
+						<div class="panel-body-map">
+							<div id="chartdiv585" style="width:100%; height:380px;" align="center"></div>
+							<script>
+ 
+  			var chart = AmCharts.makeChart( "chartdiv585", {
+  "type": "radar",
+  "theme": "light",
+  "dataProvider": [ {
+    "country": "Replenishment ships",
+    "ships": 4
+  }, {
+    "country": "Support ships",
+    "ships": 4
+  }, {
+    "country": "Tugboats",
+    "ships": 19
+  }, {
+    "country": "Training vesselss",
+    "ships": 5
+  }, {
+    "country": "Research & survey vessel",
+    "ships": 8,
+  }, {
+    "country": "Miscellaneous",
+    "ships": 23
+  },
+ {
+    "country": "Patrol vessels",
+    "ships": 35
+  }  
+  ],
+  "valueAxes": [ {
+    "axisTitleOffset": 5,
+    "minimum": 0,
+    "axisAlpha": 0.15
+  } ],
+  "startDuration": 3,
+  "graphs": [ {
+  "fontsize":"1vw",
+    "balloonText": "[[value]] ships of Auxiliary fleet",
+    "bullet": "round",
+    "valueField": "ships"
+  } ],
+  "categoryField": "country",
+  "responsive": {
+    "enabled": true
+  },
+  "export": {
+    "enabled": true
+  }
+} );
+</script>		
+						</div>
+	
+					</div>
+				</div>  
+			 
+           </div> 
+
+<div class="row">
+		    <div class="col-lg-6 col-md-6">
+					
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h2><i class="fa fa-map-marker red"></i><strong>Naval Units and History</strong></h2>
+							<div class="panel-actions">
+								<a href="index.html#" class="btn-setting"><i class="fa fa-rotate-right"></i></a>
+								<a href="index.html#" class="btn-minimize"><i class="fa fa-chevron-up"></i></a>
+								<a href="index.html#" class="btn-close"><i class="fa fa-times"></i></a>
+							</div>	
+						</div>
+						<div class="panel-body-map">
+							<div id="chartdiv50" style=" height:110px;"></div>
+							<script>
+ 
+  			 var places = [
+              {
+                name: "Eastern Naval Command",
+				nam: "https://en.wikipedia.org/wiki/Eastern_Naval_Command",
+                location: {
+                  latitude: 17.686816,
+                  longitude: 83.218482
+                }
+              },
+              {
+                name: "INAS 342",
+				nam: "https://en.wikipedia.org/wiki/INAS_342",
+                location: {
+                  latitude: 8.948411,
+                  longitude:76.273979
+                }
+              }
+			  ,
+              {
+                name: "INAS 343",
+                nam: "https://en.wikipedia.org/wiki/INAS_343",
+				location: {
+                  latitude: 21.641707,
+                  longitude:69.629265
+                }
+              }
+			  ,
+              {
+                name: "Southern Naval Command",
+                nam: "https://en.wikipedia.org/wiki/Southern_Naval_Command",
+				location: {
+                  latitude: 9.931233,
+                  longitude:76.267304
+                }
+              }
+			  ,
+              {
+                name: "Western Naval Command",
+                nam: "https://en.wikipedia.org/wiki/Western_Naval_Command",
+				location: {
+                  latitude: 19.075984,
+                  longitude: 72.877656
+                }
+              }
+			  
+            ]
+		
+             var canvas = d3.select("#chartdiv50")
+                            .append("svg")
+                            .attr("viewBox", "0 0 " + (1050-20) + " " +(750-30))
+    .attr("preserveAspectRatio", "xMidYMid meet")
+ .append("g")
+          .attr("transform","translate("+(0)+","+(-5)+")")	;
+	
+								
+var data;
+d3.json("test.json", function(error, swiss) {
+  if (error) throw error;
+
+  var cantons = topojson.feature(swiss, swiss.objects.india);
+  
+  			//svg.call(tip);
+			var group=canvas.selectAll("g")
+				.data(cantons.features)
+				.enter()
+				.append("g");
+							 
+							 
+				var tip = d3.tip()
+							.attr('class', 'd3-tip')
+							.offset([200, 0])
+							//.style("left", "300px")
+							//.style("top", "400px")
+							.html(function(d) {
+								return ("<a href="+d.nam+" target='_blank'>"+d.name +"</a>");
+							});
+							
+						canvas.call(tip);			 
+                          
+                var projection = d3.geo.mercator().scale(806).translate([-580,569]);
+                   canvas.selectAll(".pin")
+						  .data(places)
+						  .enter().append("rect", ".pin")
+						  .attr("width", 10)
+						  .attr("height",10)
+						  .attr("transform", function(d) {
+							return "translate(" + projection([
+							  d.location.longitude,
+							  d.location.latitude
+							]) + ")";
+						  })
+						  .on('mouseover', tip.show)
+							.on('click', tip.hide);
+							
+                var path = d3.geo.path().projection(projection);
+                              
+                var areas = group.append("path")
+                                    .attr("d",path)
+                                    .attr("class","area")
+                                    .attr("fill","steelblue");
+				
+				
+                   
+				
+    });
+   
+      
+</script>		
+						</div>
+	
+					</div>
+				</div>
+				</div>		   
+             
+              <!-- page end-->
+          </section>
+      </section>
+      <!--main content end-->
+  </section>
+  <!-- container section end -->
+
+    <!-- javascripts -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- nice scroll -->
+    <script src="js/jquery.scrollTo.min.js"></script>
+    <script src="js/jquery.nicescroll.js" type="text/javascript"></script>
+    <!-- jquery knob -->
+    <script src="assets/jquery-knob/js/jquery.knob.js"></script>
+    <!--custome script for all page-->
+    <script src="js/scripts.js"></script>
+
+  <script>
+
+      //knob
+      $(".knob").knob();
+
+  </script>
+
+  </body>
+</html>

@@ -1,0 +1,12 @@
+{
+	"name":"Max","value":100,
+	"children":[
+		{ "name":"First Kashmir War 1947", "value":20,"p":1 },
+		{ "name":"Congo Crisis (1961)", "value":20,"p":5 },
+		{ "name":"Sino-Indian War (1962)", "value":20,"p":10 },
+		{ "name":"Second Kashmir War 1965", "value":20,"p":15 },
+		{ "name":"Bangladesh Lib. War 1971", "value":20,"p":20 },
+		{ "name":"Operation Meghdoot 1984", "value":20,"p":25 },
+		{ "name":"Kargil 1999", "value":20,"p":30 }
+	]
+}

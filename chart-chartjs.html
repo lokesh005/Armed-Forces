@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+   <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dashboard">
+    <meta name="author" content="Lokesh Todwal">
+    <meta name="keyword" content="hii">
+    <link rel="shortcut icon" href="img/favicon.png">
+
+    <title>Airforce</title>
+
+	
+	<script src="d3.js"></script> 
+	 <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+	
+	 
+	
+	<script src="amcharts.js"></script>
+<script src="pie.js"></script>
+<script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
+<script src="responsive.min.js"></script>
+    <!-- Bootstrap CSS -->    
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- bootstrap theme -->
+    <link href="css/bootstrap-theme.css" rel="stylesheet">
+    <!--external css-->
+    <!-- font icon -->
+    <link href="css/elegant-icons-style.css" rel="stylesheet" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" />    
+    <!-- Custom styles -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style-responsive.css" rel="stylesheet" />
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+      <script src="js/lte-ie7.js"></script>
+    <![endif]-->
+	
+	<style type="text/css">
+			.d3-tip {
+			  line-height: 1;
+			  font-weight: bold;
+			  padding: 12px;
+			  background: black;
+			  color: #fff;
+			  border-radius: 2px;
+			  opacity: 0.001%;
+			}
+			.d3-tip:after {
+			  box-sizing: border-box;
+			  display: inline;
+			  font-size: 10px;
+			  width: 100%;
+			  line-height: 1;
+			  color: black;
+			  content: "\25BC";
+			  position: absolute;
+			  text-align: center;
+			  opacity: 0.001%;
+			}
+
+			.d3-tip.n:after {
+			  margin: -1px 0 0 0;
+			  top: 100%;
+			  left: 0;
+			  opacity: 0.001%;
+			}
+			
+			.area:hover {
+				fill: brown;
+			}
+	</style>
+	
+	
+  </head>
+
+  <body>
+  <!-- container section start -->
+  <section id="container" class="">
+      <!--header start-->
+      
+      <header class="header dark-bg">
+            <div class="toggle-nav">
+                <div class="icon-reorder tooltips" data-original-title="Toggle Navigation" data-placement="bottom"><i class="icon_menu"></i></div>
+            </div>
+
+            <!--logo start-->
+            <a href="index.html" class="logo">Indian <span class="lite">Armed Forces</span></a>
+            <!--logo end-->
+
+
+            
+      </header>      
+      <!--header end-->
+
+      <!--sidebar start-->
+      <aside>
+          <div id="sidebar"  class="nav-collapse ">
+              <!-- sidebar menu start-->
+              <ul class="sidebar-menu">                
+                  <li class="active">
+                      <a class="" href="index.html">
+                          <i class="icon_house_alt"></i>
+                          <span>Indian Army</span>
+                      </a>
+                  </li>
+				  
+                  <li>
+                      <a class="" href="widgets.html">
+                          <i class="icon_genius"></i>
+                          <span>Indian Navy</span>
+                      </a>
+                  </li>
+                  <li>                     
+                      <a class="" href="chart-chartjs.html">
+                          <i class="icon_piechart"></i>
+                          <span>Indian  Airforce</span>
+                          
+                      </a>
+                                         
+                  </li>
+                             
+                  
+                  
+              </ul>
+              <!-- sidebar menu end-->
+          </div>
+      </aside>
+      <!--sidebar end-->
+
+      <!--main content start-->      
+      <section id="main-content">
+        <section class="wrapper">
+		<div class="row">
+				<div class="col-lg-12">
+					<h3 class="page-header"><i class="icon_piechart"></i> Indian Airforce</h3>
+					<ol class="breadcrumb">
+						<li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
+						<li><i class="icon_piechart"></i>Indian Airforce</li>
+						
+					</ol>
+				</div>
+			</div>
+            <div class="row">
+              <!-- chart morris start -->
+               <div class="col-lg-6 col-md-8">
+             
+                          <!-- Line -->
+                          <div class="panel panel-default">
+						<div class="panel-heading">
+							<h2><i class="fa fa-map-marker red"></i><strong>Fighter Aircrafts</strong></h2>
+							<div class="panel-actions">
+								<a href="index.html#" class="btn-setting"><i class="fa fa-rotate-right"></i></a>
+								<a href="index.html#" class="btn-minimize"><i class="fa fa-chevron-up"></i></a>
+								<a href="index.html#" class="btn-close"><i class="fa fa-times"></i></a>
+							</div>	
+						</div>
+						<div class="panel-body-map">
+							<div id="chartdiv" style=" height:380px;"></div>
+							<script> 
+var chart = AmCharts.makeChart( "chartdiv", {
+  "type": "pie",
+  "theme": "light",
+  
+  "dataProvider": [ {
+    "country": "Sukhoi Su-30MKI",
+    "visits": 220
+  }, {
+    "country": "HAL Tejas",
+    "visits": 9
+  }, {
+    "country": "Mikoyan MiG-29",
+    "visits": 69
+  }, {
+    "country": "Dasault Mirage 2000",
+    "visits": 50
+  }, {
+    "country": "MiGurevich-21",
+    "visits": 245
+  } ],
+  "valueField": "visits",
+  "titleField": "country",
+  "startEffect": "elastic",
+  "startDuration": 2,
+  "radius":80,
+  "labelRadius": 15,
+  "innerRadius": "50%",
+  "depth3D": 10,
+  "balloonText": "[[title]]<br><span style='font-size:11px'><b>[[value]]</b> </span>",
+  "angle": 15,
+  "responsive": {
+    "enabled": true
+  },
+  "export": {
+    "enabled": true
+  }
+} );
+jQuery( '.chart-input' ).off().on( 'input change', function() {
+  var property = jQuery( this ).data( 'property' );
+  var target = chart;
+  var value = Number( this.value );
+  chart.startDuration = 0;
+
+  if ( property == 'innerRadius' ) {
+    //value += "%";
+  }
+
+  target[ property ] = value;
+  chart.validateNow();
+} );
+							
+</script>		
+						</div>
+	
+					</div>
+					</div>
+											
+                          <!-- Bar -->
+                          <div class="col-lg-6 col-md-8">
+					
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h2><i class="fa fa-map-marker red"></i><strong>Helicopters</strong></h2>
+							<div class="panel-actions">
+								<a href="index.html#" class="btn-setting"><i class="fa fa-rotate-right"></i></a>
+								<a href="index.html#" class="btn-minimize"><i class="fa fa-chevron-up"></i></a>
+								<a href="index.html#" class="btn-close"><i class="fa fa-times"></i></a>
+							</div>	
+						</div>
+						<div class="panel-body-map">
+							<div id="chartdiv1" style=" height:380px;" align="center"></div>
+							<script>
+							
+								var chart = AmCharts.makeChart( "chartdiv1", {
+  "type": "pie",
+  "theme": "light",
+ 
+  "dataProvider": [ {
+    "country": "Mil Mi-25 Hind-E",
+    "visits": 20
+  }, {
+    "country": "HAL Rudra",
+    "visits": 7
+  }, {
+    "country": "HAL Light Combat Helicopter",
+    "visits": 3
+  }, {
+    "country": "Mil Mi-26 Halo",
+    "visits": 3
+  }, {
+    "country": "Mi Mi-8",
+    "visits": 300
+  }
+, {
+    "country": "HAL Dhruv",
+    "visits": 46
+  }
+  , {
+    "country": "HAL Cheetah",
+    "visits": 14
+  }
+  , {
+    "country": "HAL Chetak",
+    "visits": 74
+  }
+
+  ],
+  "valueField": "visits",
+  "titleField": "country",
+  "startEffect": "elastic",
+   "radius":80,
+  "startDuration": 2,
+  "labelRadius": 15,
+  "innerRadius": "50%",
+  "depth3D": 10,
+  "balloonText": "[[title]]<br><span style='font-size:14px'><b>[[value]]</b> </span>",
+  "angle": 15,
+  "responsive": {
+    "enabled": true
+  },
+  "export": {
+    "enabled": true
+  }
+} );
+jQuery( '.chart-input' ).off().on( 'input change', function() {
+  var property = jQuery( this ).data( 'property' );
+  var target = chart;
+  var value = Number( this.value );
+  chart.startDuration = 0;
+
+  if ( property == 'innerRadius' ) {
+    value += "%";
+  }
+
+  target[ property ] = value;
+  chart.validateNow();
+} );
+							</script>		
+						</div>
+	
+					</div>
+				</div>  
+			 
+           </div> 
+                      
+                     <div class="row">
+		    <div class="col-lg-6 col-md-8">
+					
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h2><i class="fa fa-map-marker red"></i><strong>Trainer Aircrafts</strong></h2>
+							<div class="panel-actions">
+								<a href="index.html#" class="btn-setting"><i class="fa fa-rotate-right"></i></a>
+								<a href="index.html#" class="btn-minimize"><i class="fa fa-chevron-up"></i></a>
+								<a href="index.html#" class="btn-close"><i class="fa fa-times"></i></a>
+							</div>	
+						</div>
+						<div class="panel-body-map">
+							<div id="chartdiv66" style=" height:380px;"></div>
+							<script>
+ 
+  			var chart = AmCharts.makeChart( "chartdiv66", {
+  "type": "pie",
+  "theme": "light",
+
+  "dataProvider": [ {
+    "country": "BAE Hawk",
+    "visits": 90
+  }, {
+    "country": "HAL HJT-16 Kiran",
+    "visits": 81
+  }, {
+    "country": "Pilatus PC-7",
+    "visits": 75
+  }
+  ],
+  "valueField": "visits",
+  "titleField": "country",
+  "startEffect": "elastic",
+  "startDuration": 2,
+  "radius":80,
+  "labelRadius": 15,
+  "innerRadius": "50%",
+  "depth3D": 10,
+  "balloonText": "[[title]]<br><span style='font-size:14px'><b>[[value]]</b> </span>",
+  "angle": 15,
+  "responsive": {
+    "enabled": true
+  },
+  "export": {
+    "enabled": true
+  }
+} );
+jQuery( '.chart-input' ).off().on( 'input change', function() {
+  var property = jQuery( this ).data( 'property' );
+  var target = chart;
+  var value = Number( this.value );
+  chart.startDuration = 0;
+
+  if ( property == 'innerRadius' ) {
+    value += "%";
+  }
+
+  target[ property ] = value;
+  chart.validateNow();
+} );
+</script>		
+						</div>
+	
+					</div>
+				</div>
+              
+            <div class="col-lg-6 col-md-8">
+					
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h2><i class="fa fa-map-marker red"></i><strong>Transporter Aircrafts</strong></h2>
+							<div class="panel-actions">
+								<a href="index.html#" class="btn-setting"><i class="fa fa-rotate-right"></i></a>
+								<a href="index.html#" class="btn-minimize"><i class="fa fa-chevron-up"></i></a>
+								<a href="index.html#" class="btn-close"><i class="fa fa-times"></i></a>
+							</div>	
+						</div>
+						<div class="panel-body-map">
+							<div id="chartdiv76" style= height:380px;" align="center"></div>
+							<script>
+ 
+var chart = AmCharts.makeChart( "chartdiv76", {
+  "type": "pie",
+  "theme": "light",
+  
+  "dataProvider": [ {
+    "country": "C-17 Globemaster",
+    "visits": 10
+  }, {
+    "country": "Ilyushin Il-76 Candid",
+    "visits": 17
+  }, {
+    "country": "C-130J Super Hercules",
+    "visits": 5
+  }, {
+    "country": "Hawker Siddeley HS 748",
+    "visits": 59
+  }, {
+    "country": "Antnov An-32 Cline",
+    "visits": 100
+  }
+, {
+    "country": "Dornier Do 228",
+    "visits": 40
+  }
+  , {
+    "country": "Boeing 737",
+    "visits": 4
+  }
+  , {
+    "country": "Embraer 135,145",
+    "visits": 8
+  }
+
+  ],
+  "valueField": "visits",
+  "titleField": "country",
+  "startEffect": "elastic",
+  "radius":80,
+  "startDuration": 2,
+  "labelRadius": 15,
+  "innerRadius": "50%",
+  "depth3D": 10,
+  "balloonText": "[[title]]<br><span style='font-size:14px'><b>[[value]]</b> </span>",
+  "angle": 15,
+  "responsive": {
+    "enabled": true
+  },
+  "export": {
+    "enabled": true
+  }
+} );
+jQuery( '.chart-input' ).off().on( 'input change', function() {
+  var property = jQuery( this ).data( 'property' );
+  var target = chart;
+  var value = Number( this.value );
+  chart.startDuration = 0;
+
+  if ( property == 'innerRadius' ) {
+    value += "%";
+  }
+
+  target[ property ] = value;
+  chart.validateNow();
+} );
+</script>		
+						</div>
+	
+					</div>
+				</div>  
+			 
+           </div> 
+                      <div class="row">
+					  
+					  
+					  
+					  
+		    <div class="col-lg-6 col-md-8">
+					
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h2><i class="fa fa-map-marker red"></i><strong>Operation done by Airforce</strong></h2>
+							<div class="panel-actions">
+								<a href="index.html#" class="btn-setting"><i class="fa fa-rotate-right"></i></a>
+								<a href="index.html#" class="btn-minimize"><i class="fa fa-chevron-up"></i></a>
+								<a href="index.html#" class="btn-close"><i class="fa fa-times"></i></a>
+							</div>	
+						</div>
+						<div class="panel-body-map">
+							<div id="chartdiv50" style=" height:180px;"></div>
+							<script>
+ 
+  			var canvas = d3.select("#chartdiv50")
+			.append("svg")
+			.attr("viewBox", "0 0 " + (600) + " " +(350))
+    .attr("preserveAspectRatio", "xMidYMid meet")
+			.append("g")
+				.attr("transform", "translate(50,-127)");
+
+
+		var pack = d3.layout.pack()
+					.size([400, 600 - 50])
+					.padding(10);
+var color = d3.scale.linear()
+									.domain([1,5,10,15,20,25,30])
+									.range(["#ff9999","#1a8cff","#94b8b8","#33ccff","#d966ff","#666600","#664400"]);
+
+		d3.json("mydata3.json", function  (data) {
+				
+				var nodes = pack.nodes(data);
+	
+					var tip = d3.tip()
+							.attr('class', 'd3-tip')
+							.offset([55, 0])
+							//.style("left", "300px")
+							//.style("top", "400px")
+							.html(function(d) {
+								return (d.name );
+							})
+							
+						canvas.call(tip);
+				var node = canvas.selectAll(".node")
+					.data(nodes)
+					.enter()
+					.append("g")
+						.attr("class","node")
+						.attr("transform", function (d) { return "translate(" + d.x + "," + d.y + ")";})
+						.on('mouseover', tip.show)
+							.on('click', tip.hide);		
+					
+
+				node.append("circle")
+					.attr("r", function (d) {return d.children ?"":d.r-40;})
+					.attr("fill",function(d){return color(d.p) ;})
+					.attr("opacity",0.25)
+					.attr("stroke", function (d) {return d.children ? "#fff":"#ADADAD"})
+					.attr("stroke-width", "1");
+
+			
+						  
+				node.append("text")
+				//.text(function (d) {return d.name})
+				.style("font-size","10px")
+				.attr("transform", "translate(-60,0)")
+				.text(function (d) { return d.children ? "" : d.name}) // If the node has children then set text to nothing otherwise set the text to nam eproperties. 
+		});
+
+   
+      
+</script>		
+						</div>
+	
+					</div>
+				</div>
+				</div>
+                  
+                    </section>
+              
+              <!-- chart morris start -->
+            </div>
+      </section>
+      <!--main content end-->
+    </section>
+    <!-- container section end -->
+    <!-- javascripts -->
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- nice scroll -->
+    <script src="js/jquery.scrollTo.min.js"></script>
+    <script src="js/jquery.nicescroll.js" type="text/javascript"></script>
+    <!-- chartjs -->
+    <script src="assets/chart-master/Chart.js"></script>
+    <!-- custom chart script for this page only-->
+    <script src="js/chartjs-custom.js"></script>
+    <!--custome script for all page-->
+    <script src="js/scripts.js"></script>
+
+  </body>
+</html>

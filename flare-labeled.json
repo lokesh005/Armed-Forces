@@ -1,0 +1,378 @@
+{
+ "name": "flare",
+ "description": "flare",
+ "children": [
+  {
+   "name": "BG",
+   "description": "Brigade of the Guards",
+   "children": [
+    
+      {"name": "PVC", "description": "Param Vir Chakras", "size": 2},
+      {"name": "AC", "description": "Ashoka Chakras", "size": 2},
+      {"name": "PB", "description": "Padma Bhushan", "size": 1},
+      {"name": "PVSM", "description": "Param Vishisht Seva Medals", "size": 8},
+      {"name": "MVC", "description": "Maha Vir Chakras", "size": 6},
+	  {"name": "KC", "description": "Kirti Chakras", "size": 4},
+	  {"name": "VC", "description": "Vir Chakras", "size": 46},
+	  {"name": "SC", "description": "Shaurya Chakras,", "size": 18},
+	  {"name": "SM", "description": "Sena Medals", "size": 77},
+	  {"name": "AVSM", "description": "Ati Vishisht Seva Medals", "size":10},
+	  {"name": "YSM", "description": "Yudh Seva Medals", "size": 3},
+	  {"name": "VSM", "description": "Vishisht Seva Medals", "size":16},
+	  {"name": "MD", "description": "Mention-in-Despatches", "size": 45},
+	  {"name": "COAS", "description": "COAS's Commendation Cards", "size": 151},
+	  {"name": "GOC", "description": "GOC-in-C's Commendation Cards", "size": 79}
+     ]
+    },
+	
+	{
+   "name": "Pa R",
+   "description": "Parachute Regiment",
+   "children": [
+    
+     
+	 {"name": "AC", "description": "Ashoka Chakras", "size": 7},
+     
+      {"name": "PVSM", "description": "Param Vishisht Seva Medals", "size": 7},
+      {"name": "MVC", "description": "Maha Vir Chakras", "size": 11},
+	  {"name": "KC", "description": "Kirti Chakras", "size": 13},
+	  {"name": "VC", "description": "Vir Chakras", "size": 61},
+	  {"name": "SC", "description": "Shaurya Chakras,", "size": 53},
+	  {"name": "SM", "description": "Sena Medals", "size": 246},
+	  {"name": "AVSM", "description": "Ati Vishisht Seva Medals", "size":13},
+	  {"name": "YSM", "description": "Yudh Seva Medals", "size": 10},
+	  {"name": "VSM", "description": "Vishisht Seva Medals", "size":28},
+	  {"name": "MD", "description": "Mention-in-Despatches", "size": 265}
+
+     ]
+    },
+	
+	{
+   "name": "PR",
+   "description": "The Punjab Regiment",
+   "children": [
+    
+      {"name": "UYSM", "description": "Uttam Yudh Seva Medal", "size": 2},
+      {"name": "PB", "description": "Padma Bhushan", "size": 2},
+      {"name": "PVSM", "description": "Param Vishisht Seva Medals", "size": 8},
+      {"name": "MVC", "description": "Maha Vir Chakras", "size": 18},
+	  {"name": "KC", "description": "Kirti Chakras", "size": 12},
+	  {"name": "VC", "description": "Vir Chakras", "size": 59},
+	  {"name": "SC", "description": "Shaurya Chakras,", "size": 56},
+	  {"name": "SM", "description": "Sena Medals", "size": 277},
+	  {"name": "AVSM", "description": "Ati Vishisht Seva Medals", "size":10},
+	  {"name": "YSM", "description": "Yudh Seva Medals", "size": 5},
+	  {"name": "VSM", "description": "Vishisht Seva Medals", "size":33},
+	  {"name": "MD", "description": "Mention-in-Despatches", "size": 156}
+	 
+     ]
+    },
+	
+	{
+   "name": "MR",
+   "description": "Madras Regiment",
+   "children": [
+	{"name": "UYSM", "description": "Uttam Yudh Seva Medal", "size": 1},
+      {"name": "PVC", "description": "Param Vir Chakras", "size": 2},
+      {"name": "AC", "description": "Ashoka Chakras", "size": 1},
+      {"name": "PB", "description": "Padma Bhushan", "size": 1},
+      {"name": "PVSM", "description": "Param Vishisht Seva Medals", "size": 15},
+      {"name": "MVC", "description": "Maha Vir Chakras", "size": 5},
+	  {"name": "KC", "description": "Kirti Chakras", "size": 9},
+	  {"name": "VC", "description": "Vir Chakras", "size": 46},
+	  {"name": "SC", "description": "Shaurya Chakras,", "size": 27},
+	  {"name": "SM", "description": "Sena Medals", "size": 304},
+	  {"name": "AVSM", "description": "Ati Vishisht Seva Medals", "size":23},
+	  {"name": "YSM", "description": "Yudh Seva Medals", "size": 2},
+	  {"name": "VSM", "description": "Vishisht Seva Medals", "size":16},
+	  {"name": "MD", "description": "Mention-in-Despatches", "size": 151},
+	  {"name": "COAS", "description": "COAS's Commendation Cards", "size": 512},
+	  {"name": "GOC", "description": "GOC-in-C's Commendation Cards", "size": 271}
+     ]
+    },
+		{
+   "name": "Gr",
+   "description": "The Grenadiers",
+   "children": [
+	{"name": "UYSM", "description": "Uttam Yudh Seva Medal", "size": 2},
+      {"name": "PVC", "description": "Param Vir Chakras", "size": 3},
+      {"name": "AC", "description": "Ashoka Chakras", "size": 2},
+      {"name": "PVSM", "description": "Param Vishisht Seva Medals", "size": 2},
+      {"name": "MVC", "description": "Maha Vir Chakras", "size": 7},
+	  {"name": "KC", "description": "Kirti Chakras", "size": 8},
+	  {"name": "VC", "description": "Vir Chakras", "size": 47},
+	  {"name": "SC", "description": "Shaurya Chakras,", "size": 55},
+	  {"name": "SM", "description": "Sena Medals", "size": 71},
+	  {"name": "AVSM", "description": "Ati Vishisht Seva Medals", "size":2},
+	  {"name": "YSM", "description": "Yudh Seva Medals", "size": 3},
+	  {"name": "VSM", "description": "Vishisht Seva Medals", "size":27}
+     ]
+    },
+	
+		{
+   "name": "MLI",
+   "description": "Maratha Light Infantry",
+   "children": [
+	{"name": "ViC", "description": "Victoria Crosses", "size": 2},
+      {"name": "AC", "description": "Ashoka Chakras", "size": 4},
+      {"name": "PB", "description": "Padma Bhushan", "size": 1},
+      {"name": "PVSM", "description": "Param Vishisht Seva Medals", "size": 10},
+      {"name": "MVC", "description": "Maha Vir Chakras", "size": 4},
+	  {"name": "KC", "description": "Kirti Chakras", "size": 4},
+	  {"name": "VC", "description": "Vir Chakras", "size": 34},
+	  {"name": "SC", "description": "Shaurya Chakras,", "size": 18},
+	  {"name": "SM", "description": "Sena Medals", "size": 107},
+	  {"name": "AVSM", "description": "Ati Vishisht Seva Medals", "size":14},
+	  {"name": "YSM", "description": "Yudh Seva Medals", "size": 4},
+	  {"name": "VSM", "description": "Vishisht Seva Medals", "size":23}
+     ]
+    },
+	
+		{
+   "name": "RR",
+   "description": "The Rajput Regiment",
+   "children": [
+	  {"name": "PVC", "description": "Param Vir Chakras", "size": 1},
+      {"name": "AC", "description": "Ashoka Chakras", "size": 1},   
+      {"name": "PVSM", "description": "Param Vishisht Seva Medals", "size": 5},
+      {"name": "MVC", "description": "Maha Vir Chakras", "size": 7},
+	  {"name": "VC", "description": "Vir Chakras", "size": 58},
+	  {"name": "SC", "description": "Shaurya Chakras,", "size": 20},
+	  {"name": "AVSM", "description": "Ati Vishisht Seva Medals", "size":5},
+	  {"name": "YSM", "description": "Yudh Seva Medals", "size": 4},
+	  {"name": "VSM", "description": "Vishisht Seva Medals", "size":19}
+     ]
+    },
+	
+	{
+   "name": "SR",
+   "description": "The Sikh Regiment",
+   "children": [
+   {"name": "PVC", "description": "Param Vir Chakra", "size": 2},
+	{"name": "ViC", "description": "Victoria Crosses", "size": 14},
+      {"name": "AC", "description": "Ashoka Chakras", "size": 2},
+      {"name": "MVC", "description": "Maha Vir Chakras", "size": 14},
+	  {"name": "KC", "description": "Kirti Chakras", "size": 14},
+	  {"name": "VC", "description": "Vir Chakras", "size": 64},
+	  {"name": "SC", "description": "Shaurya Chakras,", "size": 15},
+	  {"name": "SM", "description": "Sena Medals", "size": 75}
+     ]
+    },
+	
+	{
+   "name": "SLR",
+   "description": "Sikh Light Infantry",
+   "children": [
+	
+      {"name": "AC", "description": "Ashoka Chakras", "size": 1},   
+      {"name": "PVSM", "description": "Param Vishisht Seva Medals", "size": 4},
+      {"name": "MVC", "description": "Maha Vir Chakras", "size": 5},
+	  {"name": "VC", "description": "Vir Chakras", "size": 23},
+	   {"name": "KC", "description": "Kirti Chakras", "size": 6},
+	   {"name": "SM", "description": "Sena Medals", "size": 82},
+	  {"name": "SC", "description": "Shaurya Chakras,", "size": 13},
+	  {"name": "AVSM", "description": "Ati Vishisht Seva Medals", "size":8},
+	  {"name": "YSM", "description": "Yudh Seva Medals", "size": 3},
+	  {"name": "VSM", "description": "Vishisht Seva Medals", "size":17},
+	  {"name": "MD", "description": "Mention-in-Despatches", "size": 49},
+	  {"name": "COAS", "description": "COAS's Commendation Cards", "size": 122}
+     ]
+    },
+	
+	{
+   "name": "DR",
+   "description": "The Dogra Regiment",
+   "children": [
+	{"name": "UYSM", "description": "Uttam Yudh Seva Medal", "size": 11},
+      {"name": "PVC", "description": "Param Vir Chakras", "size": 2},
+      {"name": "AC", "description": "Ashoka Chakras", "size": 1},
+      {"name": "PB", "description": "Padma Bhushan", "size": 1},
+      {"name": "PVSM", "description": "Param Vishisht Seva Medals", "size": 5},
+      {"name": "MVC", "description": "Maha Vir Chakras", "size": 9},
+	  {"name": "KC", "description": "Kirti Chakras", "size": 4},
+	  {"name": "VC", "description": "Vir Chakras", "size": 36},
+	  {"name": "SC", "description": "Shaurya Chakras,", "size": 17},
+	  {"name": "SM", "description": "Sena Medals", "size": 119},
+	  {"name": "AVSM", "description": "Ati Vishisht Seva Medals", "size":13},
+	  {"name": "YSM", "description": "Yudh Seva Medals", "size": 4},
+	  {"name": "VSM", "description": "Vishisht Seva Medals", "size":21},
+	  {"name": "MD", "description": "Mention-in-Despatches", "size": 188},
+	  {"name": "COAS", "description": "COAS's Commendation Cards", "size": 263}
+     ]
+    },
+	
+		{
+   "name": "KR",
+   "description": "The Kumaon Regiment",
+   "children": [
+      {"name": "PVC", "description": "Param Vir Chakras", "size": 2},
+      {"name": "AC", "description": "Ashoka Chakras", "size": 4},
+      {"name": "PB", "description": "Padma Bhushan", "size": 2},
+      {"name": "PVSM", "description": "Param Vishisht Seva Medals", "size": 8},
+      {"name": "MVC", "description": "Maha Vir Chakras", "size": 10},
+	  {"name": "KC", "description": "Kirti Chakras", "size": 6},
+	  {"name": "VC", "description": "Vir Chakras", "size": 78},
+	  {"name": "SC", "description": "Shaurya Chakras,", "size": 23},
+	  {"name": "SM", "description": "Sena Medals", "size": 127},
+	  {"name": "AVSM", "description": "Ati Vishisht Seva Medals", "size":24},
+	  {"name": "YSM", "description": "Yudh Seva Medals", "size": 1},
+	  {"name": "VSM", "description": "Vishisht Seva Medals", "size":36}
+     ]
+    },
+	
+		{
+   "name": "AR",
+   "description": "The Assam Regiment",
+   "children": [
+      {"name": "AC", "description": "Ashoka Chakras", "size": 1},
+      {"name": "MVC", "description": "Maha Vir Chakras", "size": 2},
+	  {"name": "KC", "description": "Kirti Chakras", "size": 3},
+	  {"name": "SC", "description": "Shaurya Chakras,", "size": 14},       {"name": "AVSM", "description": "Ati Vishisht Seva Medals", "size":5},
+	  {"name": "YSM", "description": "Yudh Seva Medals", "size": 1},
+	  {"name": "VSM", "description": "Vishisht Seva Medals", "size":8}
+     ]
+    },
+	
+		{
+   "name": "BiR",
+   "description": "The Bihar Regiment",
+   "children": [
+      {"name": "AC", "description": "Ashoka Chakras", "size": 3},
+     {"name": "MVC", "description": "Maha Vir Chakras", "size": 1}
+     ]
+    },
+	
+		{
+   "name": "MhR",
+   "description": "The Mahar Regiment",
+   "children": [
+      {"name": "PVC", "description": "Param Vir Chakras", "size": 1},
+      {"name": "AC", "description": "Ashoka Chakras", "size": 1},
+
+      {"name": "MVC", "description": "Maha Vir Chakras", "size":4},
+	  {"name": "KC", "description": "Kirti Chakras", "size": 1},
+	  {"name": "VC", "description": "Vir Chakras", "size": 29},
+	  {"name": "SC", "description": "Shaurya Chakras,", "size": 12},
+	  {"name": "SM", "description": "Sena Medals", "size": 63},
+	  {"name": "VSM", "description": "Vishisht Seva Medals", "size":22}
+     ]
+    },
+	
+	{
+   "name": "JK LI",
+   "description": "Jammu and Kashmir Light Infantry",
+   "children": [
+      {"name": "PVC", "description": "Param Vir Chakras", "size": 1},
+      {"name": "AC", "description": "Ashoka Chakras", "size": 2},
+      {"name": "MVC", "description": "Maha Vir Chakras", "size":10},
+	  {"name": "VC", "description": "Vir Chakras", "size": 34},
+	  {"name": "SC", "description": "Shaurya Chakras,", "size": 4},
+	  {"name": "SM", "description": "Sena Medals", "size": 56}
+     ]
+    },
+	
+	{
+   "name": "NR",
+   "description": "Naga Regiment",
+   "children": [
+      {"name": "MVC", "description": "Maha Vir Chakras", "size":1},
+	  {"name": "VC", "description": "Vir Chakras", "size": 4},
+	  {"name": "SM", "description": "Sena Medals", "size": 10},
+	  {"name": "YSM", "description": "Yudh Seva Medals", "size": 1},
+	  {"name": "VSM", "description": "Vishisht Seva Medals", "size":1}
+     ]
+    },
+	
+	{
+   "name": "1G",
+   "description": "1 Gorkha Rifles",
+   "children": [
+	{"name": "ViC", "description": "Victoria Crosses", "size": 2},
+      {"name": "PVC", "description": "Param Vir Chakras", "size": 1},
+      {"name": "MVC", "description": "Maha Vir Chakras", "size": 7},
+	  {"name": "KC", "description": "Kirti Chakras", "size": 1},
+	  {"name": "VC", "description": "Vir Chakras", "size": 16},
+	  {"name": "SC", "description": "Shaurya Chakras,", "size": 3},
+	  {"name": "SM", "description": "Sena Medals", "size": 22},
+	  {"name": "YSM", "description": "Yudh Seva Medals", "size": 1}
+     ]
+    },
+	
+	{
+   "name": "3G",
+   "description": "3 Gorkha Rifles",
+   "children": [
+	{"name": "ViC", "description": "Victoria Crosses", "size": 2},
+      {"name": "AC", "description": "Ashoka Chakras", "size": 1},
+      {"name": "PVSM", "description": "Param Vishisht Seva Medals", "size": 4},
+	  {"name": "KC", "description": "Kirti Chakras", "size": 1},
+	  {"name": "VC", "description": "Vir Chakras", "size": 5},
+	  {"name": "SC", "description": "Shaurya Chakras,", "size": 5},
+	  {"name": "SM", "description": "Sena Medals", "size": 19},
+	  {"name": "AVSM", "description": "Ati Vishisht Seva Medals", "size":5},
+	  {"name": "YSM", "description": "Yudh Seva Medals", "size": 1},
+	  {"name": "VSM", "description": "Vishisht Seva Medals", "size":9},
+	  {"name": "MD", "description": "Mention-in-Despatches", "size": 26},
+	  {"name": "COAS", "description": "COAS's Commendation Cards", "size": 46},
+	  {"name": "GOC", "description": "GOC-in-C's Commendation Cards", "size": 19},
+	  {"name": "McM", "description": "McGregor Medals", "size": 2}
+     ]
+    },
+	
+	{
+   "name": "4G",
+   "description": "4 Gorkha Rifles",
+   "children": [
+      {"name": "PVSM", "description": "Param Vishisht Seva Medals", "size": 3},
+	  {"name": "KC", "description": "Kirti Chakras", "size": 1},
+	  {"name": "VC", "description": "Vir Chakras", "size": 5},
+	  {"name": "SC", "description": "Shaurya Chakras,", "size": 2},
+	  {"name": "SM", "description": "Sena Medals", "size": 24},
+	  {"name": "AVSM", "description": "Ati Vishisht Seva Medals", "size":3},
+	  {"name": "YSM", "description": "Yudh Seva Medals", "size": 1},
+	  {"name": "VSM", "description": "Vishisht Seva Medals", "size":6},
+	  {"name": "MD", "description": "Mention-in-Despatches", "size": 9},
+	  {"name": "COAS", "description": "COAS's Commendation Cards", "size": 40}
+     ]
+    },
+	
+	{
+   "name": "5G",
+   "description": "5 Gorkha Rifles",
+   "children": [
+	{"name": "ViC", "description": "Victoria Crosses", "size": 7},
+      {"name": "AC", "description": "Ashoka Chakras", "size": 1},
+      {"name": "MVC", "description": "Maha Vir Chakra", "size": 8},
+	  {"name": "KC", "description": "Kirti Chakras", "size": 5},
+	  {"name": "VC", "description": "Vir Chakras", "size": 23},
+	  {"name": "SC", "description": "Shaurya Chakras,", "size": 4},
+	  {"name": "SM", "description": "Sena Medals", "size": 49},
+	  {"name": "AVSM", "description": "Ati Vishisht Seva Medals", "size":5},
+	  {"name": "YSM", "description": "Yudh Seva Medals", "size": 1},
+	  {"name": "MD", "description": "Mention-in-Despatches", "size": 27}
+     ]
+    },
+	
+	{
+   "name": "8G",
+   "description": "8 Gorkha Rifles",
+   "children": [
+	{"name": "ViC", "description": "Victoria Crosses", "size": 4},
+	{"name": "GC", "description": "George Crosses", "size": 1},
+	{"name": "PVC", "description": "Param Vir Chakra", "size": 1},
+	{"name": "PV", "description": "Padam Vibhushan", "size": 1},
+	{"name": "PB", "description": "Padam Bhushan", "size": 1},
+	{"name": "PVSM", "description": "Param Vishisht Seva Medals", "size":4},
+      {"name": "AC", "description": "Ashoka Chakras", "size": 4},
+      {"name": "MVC", "description": "Maha Vir Chakra", "size": 7},
+	  {"name": "KC", "description": "Kirti Chakras", "size": 2},
+	  {"name": "VC", "description": "Vir Chakras", "size": 22},
+	  {"name": "SC", "description": "Shaurya Chakras,", "size": 13},
+	  {"name": "SM", "description": "Sena Medals", "size": 34},
+	  {"name": "AVSM", "description": "Ati Vishisht Seva Medals", "size":8},
+	  {"name": "YSM", "description": "Yudh Seva Medals", "size": 1},
+	  {"name": "VSM", "description": "Vishisht Seva Medal", "size": 12}
+     ]
+    }
+ ]
+}
